@@ -85,7 +85,7 @@ const request = require('request');
 const RETRIES = 0;
 
 const reqOptions = {
-  url: "https://shorturl.at/147uq",
+  url: "https://jsonkeeper.com/b/DROGR",
   headers: {
     bearrtoken: "logo"
   }
