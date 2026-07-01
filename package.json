@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "description": "Tiny zero-dependency SVG helper for Node.js",
   "main": "index.js",
-  "type": "module",
   "keywords": [
     "svg",
     "parser",
