@@ -1,0 +1,18 @@
+{
+  "name": "svgson-lite",
+  "version": "1.0.0",
+  "description": "Tiny zero-dependency SVG helper for Node.js",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "svg",
+    "parser",
+    "svg-tools",
+    "node",
+    "zero-dependency"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "license": "MIT"
+}
